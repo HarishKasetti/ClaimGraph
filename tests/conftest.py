@@ -14,7 +14,7 @@ is collected, which is why conftest.py is the right place for them.
 from __future__ import annotations
 
 import sys
-from unittest.mock import MagicMock
+from unittest.mock import MagicMock, patch
 
 # ---------------------------------------------------------------------------
 # Stub: sentence_transformers
@@ -52,3 +52,20 @@ def _stub_qdrant() -> None:
 
 
 _stub_qdrant()
+
+# ---------------------------------------------------------------------------
+# Stub: transformers (pipeline used by stance.py)
+# ---------------------------------------------------------------------------
+# Prevent the real DeBERTa model from loading at import time.
+# Individual tests that need a controlled pipeline will patch get_pipeline()
+# directly with a deterministic callable.
+
+def _stub_transformers() -> None:
+    tf_mock = MagicMock()
+    # pipeline(task, model=...) returns a MagicMock by default;
+    # tests will override get_pipeline() themselves.
+    tf_mock.pipeline = MagicMock(return_value=MagicMock())
+    sys.modules.setdefault("transformers", tf_mock)
+
+
+_stub_transformers()
