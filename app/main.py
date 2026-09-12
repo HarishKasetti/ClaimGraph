@@ -13,8 +13,10 @@ app = FastAPI(
 # Routers
 # ---------------------------------------------------------------------------
 from app.api.routes import verify as verify_router  # noqa: E402
+from app.api.routes import topics as topics_router  # noqa: E402
 
 app.include_router(verify_router.router, prefix="/api/v1")
+app.include_router(topics_router.router, prefix="/api/v1")
 
 
 @app.get("/health", tags=["Health"])

@@ -98,3 +98,35 @@ def _stub_motor() -> None:
 
 
 _stub_motor()
+
+# ---------------------------------------------------------------------------
+# Stub: redis — prevent connection attempts when importing celery_app
+# ---------------------------------------------------------------------------
+
+def _stub_redis() -> None:
+    redis_mock = MagicMock()
+    sys.modules.setdefault("redis", redis_mock)
+    sys.modules.setdefault("redis.client", MagicMock())
+    sys.modules.setdefault("redis.connection", MagicMock())
+
+
+_stub_redis()
+
+# ---------------------------------------------------------------------------
+# Stub: celery + kombu — allow importing workers.celery_app without a broker
+# ---------------------------------------------------------------------------
+
+def _stub_celery() -> None:
+    # Only stub if celery isn't importable (CI without Redis).
+    # In a real env celery IS installed, so we leave it but stub the
+    # connection-making parts used at import time.
+    try:
+        import celery  # noqa: F401 — real celery installed
+    except ImportError:
+        celery_mock = MagicMock()
+        celery_mock.Celery = MagicMock(return_value=MagicMock())
+        sys.modules.setdefault("celery", celery_mock)
+        sys.modules.setdefault("celery.result", MagicMock())
+
+
+_stub_celery()
