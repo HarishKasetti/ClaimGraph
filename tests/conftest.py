@@ -69,3 +69,32 @@ def _stub_transformers() -> None:
 
 
 _stub_transformers()
+
+# ---------------------------------------------------------------------------
+# Stub: datasets (HuggingFace) — only needed if imported at module level
+# ---------------------------------------------------------------------------
+# calibrate.py does NOT import datasets at module level, so this is a safety
+# net for any future changes.  build_calibration_set.py uses a late import.
+
+def _stub_datasets() -> None:
+    ds_mock = MagicMock()
+    ds_mock.load_dataset = MagicMock(return_value=MagicMock())
+    sys.modules.setdefault("datasets", ds_mock)
+
+
+_stub_datasets()
+
+# ---------------------------------------------------------------------------
+# Stub: motor.motor_asyncio — prevent real MongoDB connections in tests
+# ---------------------------------------------------------------------------
+# test_calibrate.py patches motor inline; this stub is a belt-and-suspenders
+# guard so that importing calibrate.py never opens a real connection.
+
+def _stub_motor() -> None:
+    motor_mock = MagicMock()
+    motor_mock.AsyncIOMotorClient = MagicMock()
+    sys.modules.setdefault("motor", MagicMock())
+    sys.modules.setdefault("motor.motor_asyncio", motor_mock)
+
+
+_stub_motor()
