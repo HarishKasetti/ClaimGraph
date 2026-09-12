@@ -9,6 +9,13 @@ app = FastAPI(
     version="0.1.0",
 )
 
+# ---------------------------------------------------------------------------
+# Routers
+# ---------------------------------------------------------------------------
+from app.api.routes import verify as verify_router  # noqa: E402
+
+app.include_router(verify_router.router, prefix="/api/v1")
+
 
 @app.get("/health", tags=["Health"])
 async def health_check():
