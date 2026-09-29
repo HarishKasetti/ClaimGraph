@@ -136,11 +136,16 @@ def build_calibration_set(max_examples: int | None = None) -> None:
     from app.services.stance import get_pipeline
 
     logger.info("Loading SciFact dataset from HuggingFace …")
-    ds = load_dataset("allenai/scifact", "claims", trust_remote_code=True)
+    ds = load_dataset("json", data_files={
+    "train": "data/scifact/claims_train.jsonl",
+    "validation": "data/scifact/claims_dev.jsonl"
+})
     dev_split = ds["validation"]
 
     # Also load the corpus to resolve abstract text from doc_id
-    corpus_ds = load_dataset("allenai/scifact", "corpus", trust_remote_code=True)
+    corpus_ds = load_dataset("json", data_files={
+    "train": "data/scifact/corpus.jsonl"
+})
     corpus: dict[int, str] = {}
     for row in corpus_ds["train"]:
         doc_id = int(row["doc_id"])

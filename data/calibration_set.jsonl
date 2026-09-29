@@ -1,0 +1,26 @@
+{"margin": 10.0, "correct": 0, "claim": "0-dimensional biomaterials show inductive properties.", "winning_label": "support", "gt_label": "no_stance", "doc_id": 31715818}
+{"margin": 1.9372178448095996, "correct": 1, "claim": "1,000 genomes project enables mapping of genetic sequence variation consisting of rare variants with larger penetrance effects than common variants.", "winning_label": "no_stance", "gt_label": "no_stance", "doc_id": 14717500}
+{"margin": 1.85574063482314, "correct": 0, "claim": "1/2000 in UK have abnormal PrP positivity.", "winning_label": "refute", "gt_label": "no_stance", "doc_id": 13734012}
+{"margin": 0.6117757546668925, "correct": 0, "claim": "5% of perinatal mortality is due to low birth weight.", "winning_label": "support", "gt_label": "no_stance", "doc_id": 1606628}
+{"margin": 3.890361633711102, "correct": 1, "claim": "A deficiency of vitamin B12 increases blood levels of homocysteine.", "winning_label": "no_stance", "gt_label": "no_stance", "doc_id": 5152028}
+{"margin": 1.2429699447640883, "correct": 0, "claim": "A high microerythrocyte count raises vulnerability to severe anemia in homozygous alpha (+)- thalassemia trait subjects.", "winning_label": "support", "gt_label": "no_stance", "doc_id": 18174210}
+{"margin": 2.903138014651532, "correct": 0, "claim": "A total of 1,000 people in the UK are asymptomatic carriers of vCJD infection.", "winning_label": "refute", "gt_label": "no_stance", "doc_id": 13734012}
+{"margin": 10.0, "correct": 0, "claim": "ADAR1 binds to Dicer to cleave pre-miRNA.", "winning_label": "support", "gt_label": "no_stance", "doc_id": 5953485}
+{"margin": 10.0, "correct": 0, "claim": "AIRE is expressed in some skin tumors.", "winning_label": "support", "gt_label": "no_stance", "doc_id": 12580014}
+{"margin": 6.303718738322622, "correct": 0, "claim": "ALDH1 expression is associated with better breast cancer outcomes.", "winning_label": "refute", "gt_label": "no_stance", "doc_id": 45638119}
+{"margin": 1.5014971998631117, "correct": 1, "claim": "ALDH1 expression is associated with poorer prognosis in breast cancer.", "winning_label": "no_stance", "gt_label": "no_stance", "doc_id": 45638119}
+{"margin": 1.3580478877087396, "correct": 0, "claim": "AMP-activated protein kinase (AMPK) activation increases inflammation-related fibrosis in the lungs.", "winning_label": "support", "gt_label": "no_stance", "doc_id": 49556906}
+{"margin": 0.5043509271698483, "correct": 0, "claim": "APOE4 expression in iPSC-derived neurons increases AlphaBeta production and tau phosphorylation causing GABA neuron degeneration.", "winning_label": "refute", "gt_label": "no_stance", "doc_id": 4709641}
+{"margin": 0.3445290921671361, "correct": 0, "claim": "APOE4 expression in iPSC-derived neurons increases AlphaBeta production and tau phosphorylation, delaying GABA neuron degeneration.", "winning_label": "refute", "gt_label": "no_stance", "doc_id": 4709641}
+{"margin": 0.9725454188789429, "correct": 1, "claim": "Activation of PPM1D suppresses p53 function.", "winning_label": "no_stance", "gt_label": "no_stance", "doc_id": 5956380}
+{"margin": 4.084387308166637, "correct": 0, "claim": "Activator-inhibitor pairs are provided dorsally by Admpchordin.", "winning_label": "refute", "gt_label": "no_stance", "doc_id": 6076903}
+{"margin": 10.0, "correct": 0, "claim": "Active H. pylori urease has a polymeric structure that compromises two subunits, UreA and UreB.", "winning_label": "support", "gt_label": "no_stance", "doc_id": 4387784}
+{"margin": 2.072801518583162, "correct": 1, "claim": "Albendazole is used to treat lymphatic filariasis.", "winning_label": "no_stance", "gt_label": "no_stance", "doc_id": 1215116}
+{"margin": 1.8258865708101486, "correct": 1, "claim": "Alizarin forms hydrogen bonds with residues involved in PGAM1 substrate binding.", "winning_label": "no_stance", "gt_label": "no_stance", "doc_id": 18810195}
+{"margin": 0.9412652394662743, "correct": 0, "claim": "All hematopoietic stem cells segregate their chromosomes randomly.", "winning_label": "refute", "gt_label": "no_stance", "doc_id": 4381486}
+{"margin": 3.475529843595005, "correct": 0, "claim": "Angiotensin converting enzyme inhibitors are associated with increased risk for functional renal insufficiency.", "winning_label": "refute", "gt_label": "no_stance", "doc_id": 6157837}
+{"margin": 0.6491546468292433, "correct": 0, "claim": "Anthrax spores can be disposed of easily after they are dispersed.", "winning_label": "refute", "gt_label": "no_stance", "doc_id": 33872649}
+{"margin": 0.2732626269680257, "correct": 0, "claim": "Antibiotic induced alterations in the gut microbiome reduce resistance against Clostridium difficile", "winning_label": "support", "gt_label": "no_stance", "doc_id": 6372244}
+{"margin": 2.9397746528755393, "correct": 0, "claim": "Antiretroviral therapy reduces rates of tuberculosis across a broad range of CD4 strata.", "winning_label": "refute", "gt_label": "no_stance", "doc_id": 4883040}
+{"margin": 5.1404950653162285, "correct": 1, "claim": "Arginine 90 in p150n is important for interaction with EB1.", "winning_label": "no_stance", "gt_label": "no_stance", "doc_id": 21598000}
+{"margin": 0.1894208769702591, "correct": 0, "claim": "Arterioles have a larger lumen diameter than venules.", "winning_label": "refute", "gt_label": "no_stance", "doc_id": 8290953}

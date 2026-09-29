@@ -63,7 +63,7 @@ _MONGO_URI: str = os.getenv("MONGO_URI", "mongodb://localhost:27017/claimgraph")
 _DB_NAME: str = _MONGO_URI.rstrip("/").split("/")[-1]
 
 _PDF_DOWNLOAD_TIMEOUT: float = 30.0   # seconds per PDF download
-_MAX_PDF_PAPERS: int = 10              # max papers to fully ingest (download + parse)
+_MAX_PDF_PAPERS: int = 3              # max papers to fully ingest (download + parse)
 
 
 # ---------------------------------------------------------------------------
